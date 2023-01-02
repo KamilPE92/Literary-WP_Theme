@@ -1,0 +1,744 @@
+/*
+Theme Name: Liyerary Theme 
+Theme URI: https://github.com/KamilPE92
+Author:  Kamil Pietruszka (K.P{Dev})
+Author URI: https://github.com/KamilPE92
+Description:  Unikalny motyw zaprojektowany na potrzeby i do wyłączniego wykorzystania przez portal literacki // the theme dedicated for  literature fans and authors
+Requires at least: 5.3
+Tested up to: 5.7
+Requires PHP: 5.6
+Version: 1.0
+Text Domain: Literary Theme 
+
+
+Foxxx WordPress Theme for Najlepsza Erotyka, (C) 2021 
+*/
+
+/* GENERAL STYLES  FOR PROJECT */
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+:root {
+	/* COLORS */
+	--bg: #ffffff;
+	--sectionnewsbg: #f8f9fa;
+	---color: #111;
+	--accent: #f55308;
+
+	/* FONTS */
+
+	--fs: 1rem;
+	--fs-sm: 0.75rem;
+	--fs-excerpt: 1rem;
+	--fs-medium: 1.6rem;
+	--fs-big: 2.875rem;
+	--fo-fam: "Roboto", sans-serif;
+	--fo-we: 400;
+	--fo-we-bold: 700;
+
+	--card-width: 22.668rem;
+	--card-hight: 26.875rem;
+	--card-bg: #eeeaea;
+	--rdm-bg: #111;
+	--rdm-color: #ffffff;
+	--img-hight: 12.5rem;
+}
+
+html {
+	height: 100%;
+	font-size: 100%;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+a {
+	color: var(---color);
+}
+
+body {
+	background-color: var(--bg);
+	font-family: var(--fo-fam);
+	font-size: var(--fs);
+	color: var(---color);
+	line-height: var(--lh);
+	background-color: var();
+}
+
+.hash::before {
+	content: "#";
+	color: var(--accent);
+}
+
+/* GENERAL STYLES  FOR PROJECT END */
+
+/* Main Nav General Stleing | Desktop Start */
+/* Main Nav General Stleing | Desktop Start */
+.header {
+	background: var(--bg);
+	width: 80vw;
+	margin: auto;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	z-index: 1;
+}
+
+header a {
+	text-decoration: none;
+	color: var(---color);
+}
+
+header ul {
+	list-style: none;
+}
+
+.logo {
+	font-size: 2rem;
+}
+
+.menu-items {
+	display: flex;
+	align-items: center;
+}
+
+.menu-items li {
+	padding: 0.5rem 1rem;
+}
+
+.social {
+	transform: translateX(-35%);
+	cursor: pointer;
+}
+
+.social a {
+	padding: 0.75rem;
+}
+
+.social img {
+	width: 2rem;
+	height: 2rem;
+}
+
+/* Main stories li decoration elements start */
+
+/* Call to action top area start */
+.important--item::before {
+	content: "#";
+	font-size: 1.5rem;
+	color: var(--accent);
+}
+
+.important--item {
+	font-size: larger;
+}
+
+/* Little arrow element */
+.important--item::after {
+	content: "\25BC";
+	font-size: 0.875rem;
+}
+
+/* Main stories li decoration elements end */
+
+.main--cta--logo {
+	text-align: left;
+}
+
+.main--cta--logo::before {
+	content: "#";
+	color: var(--accent);
+	font-size: 1.2rem;
+}
+
+/* Call to action top area end */
+
+/* Mega Menu Styleing Start */
+
+.menu-item {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.mega-menu {
+	position: absolute;
+	width: 80vw;
+	left: 0;
+	top: 80px;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease;
+}
+
+.mega-menu .content {
+	background: var(--bg);
+	padding: 1rem;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 1rem;
+	width: 100%;
+	justify-content: space-between;
+	border-radius: 60px;
+	overflow-x: hidden;
+}
+
+.content .col {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	line-height: 3rem;
+}
+
+.heading--col {
+	text-align: center;
+}
+
+.content col p {
+	line-height: 1.2rem;
+}
+
+.col .mega-links li,
+.col .mega-links li a {
+	padding: 0 1rem;
+}
+
+.mega-links {
+	text-align: center;
+}
+
+.menu-items li:hover .mega-menu {
+	top: 3.125rem;
+	opacity: 1;
+	visibility: visible;
+}
+
+.mega-links li a::before {
+	content: "#";
+	color: var(--accent);
+}
+
+/* Mega Menu Styleing End */
+
+/* Hamburger */
+.hamburger {
+	display: none;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	width: 1.5rem;
+	height: 1.5rem;
+	cursor: pointer;
+	z-index: 2;
+	background: none;
+	border: none;
+	transition: all 0.25s;
+}
+
+.line-1,
+.line-2,
+.line-3 {
+	position: absolute;
+	width: 24px;
+	height: 2px;
+	background: var(---color);
+	transform: rotate(0);
+}
+
+.line-2 {
+	transform: translateY(7px);
+}
+
+.line-3 {
+	transform: translateY(14px);
+}
+
+/*Animation */
+.open .line-1 {
+	transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .line-2 {
+	display: none;
+}
+
+.open .line-3 {
+	transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}
+
+.main--cta--logo {
+	text-align: left;
+	font-size: 0.938rem;
+}
+
+.main--cta--logo::before {
+	content: "#";
+	color: var(--accent);
+	font-size: 1.2rem;
+}
+
+/* Call to action top area end */
+
+/* Main Nav General Styleing | Desktop End */
+
+.container {
+	width: 1440px;
+	max-width: 100%;
+	margin: 0 auto;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.news--container,
+.eor--section {
+	background: var(--sectionnewsbg);
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 0.75rem;
+	margin: 0 auto;
+	overflow: hidden;
+	gap: 30px;
+
+	padding: 1rem;
+	position: relative;
+}
+
+/* Card Styleing Start */
+
+article {
+	/* w363 h430 */
+
+	max-width: var(--card-width);
+	height: var(--card-hight);
+	background: var(--sectionnewsbg);
+	border-radius: 2rem;
+	top: 1.8rem;
+	flex-wrap: wrap;
+	cursor: pointer;
+	position: relative;
+	margin: 1rem auto;
+	border-radius: 2rem;
+	background: var(--card-bg);
+}
+
+/* Mid Menu Styleing Start  */
+
+.current--cat--heading--info {
+	font-style: italic;
+	border-bottom: 3px solid var(---color);
+	height: fit-content;
+	font-size: larger;
+
+	position: relative;
+}
+
+/* Extra Menu Styleing Start */
+
+.extra--menu-wrapper {
+	display: flex;
+	flex-direction: row;
+	transform: translateX(-9rem);
+	height: 2rem;
+	width: 2rem;
+	padding: 0 0.625rem;
+	position: absolute;
+	top: 1rem;
+	right: 0%;
+
+	justify-content: space-between;
+}
+
+.extra--menu-wrapper i {
+	font-size: 1.563rem;
+	padding: 0 0.75rem;
+}
+
+.extra--menu-wrapper i:hover,
+.list--sidebar--icon--wrapper i:hover,
+.fa-xmark:hover,
+.pagination--wrapper a:hover {
+	color: var(--accent);
+	cursor: pointer;
+	transition: 0.8s ease;
+}
+
+/* Extra Menu Styleing End */
+
+/* Card Styleing Start */
+
+.img--wrapper {
+	width: auto;
+	height: var(--img-hight);
+	position: relative;
+	padding: 0;
+}
+
+.img--wrapper img {
+	object-fit: cover;
+}
+
+.title--art--wrapper {
+	position: absolute;
+	bottom: 0;
+	background: var(---color);
+	width: 100%;
+	opacity: 90%;
+	height: auto;
+}
+
+.title--art--wrapper p {
+	font-size: var(--fs);
+	font-weight: bold;
+	color: var(--bg);
+	text-align: center;
+	padding: 0.5rem;
+	text-transform: uppercase;
+}
+
+.tags--wrapper {
+	width: 100%;
+
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 0.25rem;
+	background: transparent;
+}
+
+.tags--wrapper a {
+	width: auto;
+	max-width: 100%;
+	font-size: var(--fs-sm);
+	border: var(---color) 1px solid;
+	padding: 0.313rem;
+
+	border-radius: 0.75rem;
+	margin: 0 0.313rem;
+}
+
+.tags--wrapper a::before {
+	content: "#";
+	color: var(--accent);
+}
+
+.tags--wrapper a:hover:before {
+	content: "#";
+	color: var(---color);
+}
+
+.excerpt--wrapper {
+	max-width: var(--card-width);
+	line-height: 1;
+	width: auto;
+
+	font-size: var(--fs-excerpt);
+
+	text-align: center;
+}
+
+.excerpt--wrapper p {
+	padding: 0 1rem;
+}
+
+/* Primary Button Styleing Start */
+
+.rdm--btn--wrapper {
+	display: flex;
+
+	text-transform: uppercase;
+	background-color: var(--rdm-bg);
+	width: 100%;
+	height: 100%;
+	border-radius: 0.75rem;
+}
+
+.rdm--btn--wrapper a {
+	color: var(--rdm-color);
+}
+
+.rdm--btn--wrapper:hover,
+.tags--wrapper a:hover {
+	background: var(--accent);
+	transition: 0.8s ease;
+}
+
+.art--item_1,
+.art--item_2,
+.art--item_3 {
+	flex-wrap: wrap;
+	padding: 0 1rem;
+}
+
+/* Primary Button Styleing End */
+
+.current--cat--wrapper {
+	width: fit-content;
+	height: fit-content;
+	position: absolute;
+	margin: 0 auto;
+}
+
+/* Sidebar Styleing Start */
+
+#sidebar {
+	width: 350px;
+	height: 100vh;
+	background: var(--sectionnewsbg);
+	position: fixed;
+	right: 0;
+	z-index: 1;
+	display: none;
+}
+
+#sidebar.active {
+	display: flex;
+	transition: all 0.5s ease;
+}
+
+#options {
+	z-index: 2;
+}
+
+.sidebar--heading {
+	display: flex;
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+	padding: 2rem;
+}
+
+.avatar--wrapper {
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+}
+
+.avatar {
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translateX(-40%);
+}
+
+.avatar img {
+	width: 100%;
+	height: 100%;
+	width: 3.75rem;
+	height: 3.75rem;
+	transform: translateX(0.5rem);
+	border-radius: 50%;
+}
+
+.nickname {
+	text-transform: uppercase;
+	padding: 0.5rem;
+	text-align: center;
+}
+
+.list--sidebar--icon--wrapper {
+	display: flex;
+	position: absolute;
+	top: 20%;
+	left: 40%;
+	cursor: pointer;
+}
+
+.sidebar--icons {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.sidebar--icons i {
+	font-size: 2rem;
+	padding: 2rem;
+}
+
+.fa-xmark {
+	font-size: var(--fs-medium);
+	padding: 0.313rem;
+}
+
+/* Sidebar Styleing End */
+
+/* Card Styleing End */
+
+/* Pagination start */
+.pagination--wrapper {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+	bottom: 0;
+	padding: 1rem;
+
+	margin-top: 1rem;
+	/* transform: translateY(4rem); */
+}
+
+.pag--item {
+	position: relative;
+
+	padding: 0 0.625rem;
+}
+
+/* Pagination end */
+
+/* Breakpoints start */
+
+@media screen and (max-width: 750px) {
+	.hamburger {
+		display: flex;
+		position: relative;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.news--container {
+		max-width: 100%;
+		height: 100%;
+	}
+
+	article,
+	.eor--art {
+		max-width: 100%;
+
+		flex-direction: column;
+	}
+
+	.art--item_1,
+	.art--item_2,
+	.art--item_3,
+	.eor--art_1,
+	.eor--art_2,
+	.eor--art_3 {
+		margin: 1.5rem 0;
+	}
+
+	/* 
+    .art--item_3 .rdm--btn--wrapper {
+        transform: translateY(-0.8rem);
+
+    } */
+
+	.header .menu-items {
+		position: absolute;
+		height: calc(100vh -100%);
+		width: 100%;
+		max-width: 350px;
+		display: block;
+		top: 100%;
+		right: 0;
+		background: var(--bg);
+		padding: 1rem;
+		line-height: 3rem;
+		overflow-y: auto;
+		opacity: 0;
+		transform: translateY(-100vh);
+		transition: all 0.3s ease-in-out;
+		z-index: -1;
+		order: 2;
+	}
+
+	.logo,
+	.main--cta--logo .brand {
+		position: absolute;
+		left: 0;
+	}
+
+	.social {
+		order: 3;
+		position: absolute;
+		right: 0;
+		transform: translateX(10%);
+	}
+
+	.social a {
+		padding: 00.25rem;
+	}
+
+	.menu-items.open {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	.menu-items li {
+		margin: 15px 10px;
+	}
+
+	.menu-items li a {
+		padding: 0 1rem;
+		display: block;
+		font-size: 1.4rem;
+	}
+
+	.menu-items li:hover {
+		background-color: transparent;
+	}
+
+	.menu-items .mega-menu {
+		position: static;
+		opacity: 1;
+		top: 4rem;
+		visibility: visible;
+		padding-left: 1rem;
+		width: 100%;
+		max-height: 0;
+		transform: scaleY(0);
+		transform-origin: top;
+		overflow: hidden;
+		transition: all 0.2s ease;
+	}
+
+	.expand-btn.open + .expandable {
+		max-height: 100%;
+		transform: scaleY(1);
+	}
+
+	.expandable li {
+		margin: 0;
+	}
+
+	.expandable li a {
+		font-size: 1rem;
+	}
+
+	.mega-menu .content {
+		grid-template-columns: auto;
+		padding: 1rem 1rem 0 1rem;
+	}
+
+	.mega-menu .content .col {
+		width: 100%;
+		padding-top: 1rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.content .col .mega-links {
+		border-left: 0px;
+	}
+
+	.col .mega-links li {
+		margin: 0;
+	}
+
+	.pagination--wrapper {
+		position: relative;
+		top: 0;
+		padding: 1rem;
+
+		width: 100%;
+	}
+}
