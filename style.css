@@ -26,10 +26,10 @@ Foxxx WordPress Theme for Najlepsza Erotyka, (C) 2021
 :root {
     /* COLORS */
     /* --bg: #f5e8df; */
-    --bg: #f9f9f9;
+    --bg: #fff;
     --sectionnewsbg: #f9f9f9;
     ---color: #1c2025;
-    --accent: #5a1b56;
+    --accent: hsl(304, 31%, 36%);
 
     /* FONTS */
 
@@ -81,17 +81,18 @@ body {
 /* GENERAL STYLES  FOR PROJECT END */
 
 /* Main Nav General Stleing | Desktop Start */
-/* Main Nav General Stleing | Desktop Start */
 .header {
     background: var(--bg);
-    width: 80vw;
-    margin: auto;
+    width: 100%;
+    /* margin: auto; */
+
     position: relative;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem; */
     z-index: 1;
+    /* padding: 0 0.4rem; */
 }
 
 header a {
@@ -105,11 +106,26 @@ header ul {
 
 .logo {
     font-size: 2rem;
+    padding: 0 0.4rem;
+    margin: 0;
+}
+.logo::first-letter {
+    color: var(--accent);
+    font-weight: bolder;
+}
+.brand {
+    padding: 0 0.4rem;
 }
 
 .menu-items {
     display: flex;
     align-items: center;
+    cursor: pointer;
+}
+
+.menu-item:hover,
+.menu-item:focus {
+    color: var(--accent);
 }
 
 .menu-items li {
@@ -117,8 +133,9 @@ header ul {
 }
 
 .social {
-    transform: translateX(-35%);
+    /* transform: translateX(-35%); */
     cursor: pointer;
+    margin-right: 1rem;
 }
 
 .social a {
@@ -130,29 +147,9 @@ header ul {
     height: 2rem;
 }
 
-/* Main stories li decoration elements start */
-
-/* Call to action top area start */
-.important--item::before {
-    content: '#';
-    font-size: 1.5rem;
-    color: var(--accent);
-}
-
-.important--item {
-    font-size: larger;
-}
-
-/* Little arrow element */
-.important--item::after {
-    content: '\25BC';
-    font-size: 0.875rem;
-}
-
-/* Main stories li decoration elements end */
-
 .main--cta--logo {
     text-align: left;
+    padding: 0 0.4rem;
 }
 
 .main--cta--logo::before {
@@ -164,71 +161,6 @@ header ul {
 /* Call to action top area end */
 
 /* Mega Menu Styleing Start */
-
-.menu-item {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.mega-menu {
-    position: absolute;
-    width: 80vw;
-    left: 0;
-    top: 80px;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s ease;
-}
-
-.mega-menu .content {
-    background: var(--bg);
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    width: 100%;
-    justify-content: space-between;
-    border-radius: 60px;
-    overflow-x: hidden;
-}
-
-.content .col {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    line-height: 3rem;
-}
-
-.heading--col {
-    text-align: center;
-}
-
-.content col p {
-    line-height: 1.2rem;
-}
-
-.col .mega-links li,
-.col .mega-links li a {
-    padding: 0 1rem;
-}
-
-.mega-links {
-    text-align: center;
-}
-
-.menu-items li:hover .mega-menu {
-    top: 3.125rem;
-    opacity: 1;
-    visibility: visible;
-}
-
-.mega-links li a::before {
-    content: '#';
-    color: var(--accent);
-}
-
-/* Mega Menu Styleing End */
 
 /* Hamburger */
 .hamburger {
@@ -310,8 +242,9 @@ header ul {
     gap: 30px;
     position: relative;
     justify-content: center;
-    /* padding: 1rem; */
+    padding: 0.5rem 0;
     position: relative;
+    /* background: #800020; */
 }
 
 /* Card Styleing Start */
@@ -329,7 +262,7 @@ header ul {
     flex-wrap: wrap;
     cursor: pointer;
     position: relative;
-    /* margin: 1rem auto; */
+    margin: 2rem;
 
     border-radius: 2rem;
     background: var(--card-bg);
@@ -338,54 +271,48 @@ header ul {
 /* Mid Menu Styleing Start  */
 
 .current--cat--heading--info {
-    font-style: italic;
     border-bottom: 3px solid var(---color);
     height: fit-content;
-    font-size: larger;
-
+    /* font-size: larger; */
+    font-size: 0.938rem;
     position: relative;
+    /* margin: 0 0.4rem; */
 }
 
 /* Extra Menu Styleing Start */
 .topmenu-wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     /* background: red; */
-    padding: 0 0.625rem;
+    margin: 0 0.5rem;
+    /* Ten Margin odpowiada za wyrównanie hasów na górze */
 }
 .current--cat--wrapper {
     width: fit-content;
     height: fit-content;
     position: absolute;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+}
+.top-icon {
+    /* background: aqua; */
+    margin-left: auto;
 }
 
-.extra--menu-wrapper {
-    display: flex;
-    flex-direction: row;
-    transform: translateX(-9rem);
-    height: 2rem;
-    width: 2rem;
-    padding: 0 0.625rem;
-    position: absolute;
-    right: 0%;
-
-    justify-content: space-between;
+.top-icon i {
+    /* width: 2rem;
+    height: 2rem; */
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    padding: 0 0.4rem;
 }
 
-.extra--menu-wrapper i {
-    font-size: 1.563rem;
-    padding: 0 0.75rem;
-}
-
-.extra--menu-wrapper i:hover,
+.top-icon i:hover,
 .list--sidebar--icon--wrapper i:hover,
 .fa-xmark:hover,
 .pagination--wrapper a:hover {
     color: var(--accent);
     cursor: pointer;
-    transition: 0.8s ease;
+    transition: 0.8s all;
 }
 
 /* Extra Menu Styleing End */
@@ -489,8 +416,6 @@ header ul {
     content: '\25BE';
 }
 
-/* !To reguluj */
-
 .tags--wrapper a:hover,
 .excerpt--wrapper a:hover {
     color: var(--accent);
@@ -509,13 +434,14 @@ header ul {
 /* Sidebar Styleing Start */
 
 #sidebar {
-    width: 350px;
+    width: auto;
     height: 100vh;
     background: var(--sectionnewsbg);
     position: fixed;
     right: 0;
     z-index: 1;
     display: none;
+    position: fixed;
 }
 
 #sidebar.active {
@@ -613,13 +539,21 @@ header ul {
 
 /* Pagination end */
 
+/* Testy */
+/* .menu-items-mobile {
+    background: red;
+    width: 100vw;
+    height: 100vh;
+} */
+/* Testy */
+
 /* Breakpoints start */
 
 @media screen and (max-width: 750px) {
     .hamburger {
         display: flex;
-        position: relative;
-        top: 50%;
+        position: absolute;
+        top: 25%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -632,130 +566,70 @@ header ul {
     .content-card,
     .eor--art {
         max-width: 100%;
-
         flex-direction: column;
-    }
-
-    /* .art--item_1,
-	.art--item_2,
-	.art--item_3,
-	.eor--art_1,
-	.eor--art_2,
-	.eor--art_3 {
-		margin: 1.5rem 0;
-	}
-
-	/* 
-    .art--item_3 .rdm--btn--wrapper {
-        transform: translateY(-0.8rem);
-
-    } */
-    */ .header .menu-items {
-        position: absolute;
-        height: calc(100vh -100%);
-        width: 100%;
-        max-width: 350px;
-        display: block;
-        top: 100%;
-        right: 0;
-        background: var(--bg);
-        padding: 1rem;
-        line-height: 3rem;
-        overflow-y: auto;
-        opacity: 0;
-        transform: translateY(-100vh);
-        transition: all 0.3s ease-in-out;
-        z-index: -1;
-        order: 2;
     }
 
     .logo,
     .main--cta--logo .brand {
         position: absolute;
         left: 0;
+        padding: 0;
+        margin: 0;
     }
 
     .social {
         order: 3;
         position: absolute;
         right: 0;
-        transform: translateX(10%);
+        /* transform: translateX(10%); */
     }
 
     .social a {
-        padding: 00.25rem;
+        padding: 0.25rem;
     }
 
     .menu-items.open {
-        transform: translateY(0);
         opacity: 1;
+        /* background: red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
     }
-
     .menu-items li {
         margin: 15px 10px;
+        padding: 0 1rem;
     }
 
-    .menu-items li a {
-        padding: 0 1rem;
-        display: block;
+    .menu-items {
+        opacity: 0;
+        display: flex;
         font-size: 1.4rem;
     }
 
     .menu-items li:hover {
         background-color: transparent;
     }
-
-    .menu-items .mega-menu {
-        position: static;
-        opacity: 1;
-        top: 4rem;
-        visibility: visible;
-        padding-left: 1rem;
-        width: 100%;
-        max-height: 0;
-        transform: scaleY(0);
-        transform-origin: top;
-        overflow: hidden;
-        transition: all 0.2s ease;
-    }
-
-    .expand-btn.open + .expandable {
-        max-height: 100%;
-        transform: scaleY(1);
-    }
-
-    .expandable li {
-        margin: 0;
-    }
-
-    .expandable li a {
-        font-size: 1rem;
-    }
-
-    .mega-menu .content {
-        grid-template-columns: auto;
-        padding: 1rem 1rem 0 1rem;
-    }
-
-    .mega-menu .content .col {
-        width: 100%;
-        padding-top: 1rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .content .col .mega-links {
-        border-left: 0px;
-    }
-
-    .col .mega-links li {
-        margin: 0;
-    }
-
     .pagination--wrapper {
         position: relative;
         top: 0;
         padding: 1rem;
 
         width: 100%;
+    }
+}
+
+@media (min-width: 750px) {
+    .header,
+    .social {
+        padding: 0;
+        margin: 0;
+    }
+    .header {
+        font-weight: 700;
+        padding: 1rem 0;
     }
 }

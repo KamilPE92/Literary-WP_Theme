@@ -1,11 +1,8 @@
 {
-	"tabWidth": 4,
-	"singleQuote": true,
-	"printWidth": 80,
-	"trailingComma": "es5",
-	"bracketSpacing": true,
-	"editor.formatOnSave": true,
-	"trailingComma": true
-
-
+    "tabWidth": 4,
+    "singleQuote": true,
+    "printWidth": 80,
+    "trailingComma": "es5",
+    "bracketSpacing": true,
+    "editor.formatOnSave": true
 }

@@ -1,5 +1,4 @@
 <!-- !MWV -->
-<!-- todoMenu -->
 <!-- !todoDokończyć stronę głowną zgodnie z projektem -->
 <!-- todoSingle Page, Category Author Szukaj -->
 <!-- todoKomentarze Page + wtyczka  -->
@@ -21,3 +20,12 @@ Wariant 1
 --sectionnewsbg: #cec7bb;
 ---color: #1c2025;
 --accent: #5a1b56;
+
+    /* COLORS POCZĄTKOWA PALETA */
+    --bg: #ffffff;
+    --sectionnewsbg: #f8f9fa;
+    ---color: #111;
+    --accent: #f55308;
+    --card-bg: #eeeaea;
+    --rdm-bg: #111;
+    --rdm-color: #ffffff;
